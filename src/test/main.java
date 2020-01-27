@@ -33,7 +33,7 @@ public class main {
         List<Auto> autoYear = arr.stream()
             .filter(x -> LocalDate.now().getYear() - x.getYear() > 10).collect(Collectors.toList());
                 
-        Map<typeFuel,List<Auto>> groupeed = arr.stream()
+        Map<typeFuel,List<Auto>> groupd = arr.stream()
             .collect(Collectors.groupingBy((x) -> x.getFuel()));
         
         for(Auto i : autoCapacity){
@@ -44,7 +44,7 @@ public class main {
             System.out.println(i.toString());
         }
         System.out.println("");
-        System.out.println(groupeed);
+        System.out.println(groupd);
         
 
         
